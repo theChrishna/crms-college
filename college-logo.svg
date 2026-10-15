@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d365"/>
+      <stop offset="50%" stop-color="#fda085"/>
+      <stop offset="100%" stop-color="#f6d365"/>
+    </linearGradient>
+    <linearGradient id="royalNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#091833"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#f59e0b" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#goldGrad)" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="100" cy="100" r="88" fill="url(#royalNavy)" stroke="#e2e8f0" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="url(#goldGrad)" stroke-dasharray="2 3" stroke-width="1.5"/>
+
+  <!-- College Shield -->
+  <path d="M 68 62 Q 100 55 132 62 C 132 105 125 135 100 152 C 75 135 68 105 68 62 Z" 
+        fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="2.5" />
+
+  <!-- Shield Inner Accent Line -->
+  <path d="M 74 68 Q 100 63 126 68 C 126 102 120 128 100 142 C 80 128 74 102 74 68 Z" 
+        fill="none" stroke="#fef08a" stroke-width="0.8" stroke-opacity="0.6" />
+
+  <!-- Book of Knowledge -->
+  <g transform="translate(100, 102)">
+    <!-- Open Book Pages Left -->
+    <path d="M -2 -8 C -10 -15 -22 -14 -28 -10 C -28 3 -28 6 -28 6 C -22 2 -10 3 -2 10 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+    <!-- Open Book Pages Right -->
+    <path d="M 2 -8 C 10 -15 22 -14 28 -10 C 28 3 28 6 28 6 C 22 2 10 3 2 10 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+    <!-- Book Spine -->
+    <path d="M -2 -8 L 0 -7 L 2 -8 L 2 10 L 0 9 L -2 10 Z" fill="#f59e0b"/>
+  </g>
+
+  <!-- Torch / Flame of Enlightenment -->
+  <g transform="translate(100, 80)">
+    <!-- Flame Outer -->
+    <path d="M 0 -16 C 5 -10 8 -5 4 0 C 2 3 -2 3 -4 0 C -8 -5 -5 -10 0 -16 Z" fill="#f59e0b"/>
+    <!-- Flame Core -->
+    <path d="M 0 -12 C 2.5 -8 4 -5 2 -2 C 1 0 -1 0 -2 -2 C -4 -5 -2.5 -8 0 -12 Z" fill="#fef08a"/>
+    <!-- Torch Base -->
+    <path d="M -4 2 L 4 2 L 2 9 L -2 9 Z" fill="#e2e8f0"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="#fef08a">
+    <!-- Center top star -->
+    <polygon points="100,42 102,47 107,47 103,50 105,55 100,52 95,55 97,50 93,47 98,47" transform="scale(0.8) translate(25, 7)"/>
+    <!-- Left star -->
+    <polygon points="45,95 46.5,99 50.5,99 47.5,101 49,105 45,102.5 41,105 42.5,101 39.5,99 43.5,99" transform="scale(0.7) translate(19, 30)"/>
+    <!-- Right star -->
+    <polygon points="155,95 156.5,99 160.5,99 157.5,101 159,105 155,102.5 151,105 152.5,101 149.5,99 153.5,99" transform="scale(0.7) translate(47, 30)"/>
+  </g>
+
+  <!-- Monogram text in Shield bottom -->
+  <text x="100" y="132" font-family="'Cinzel', serif, system-ui" font-size="11" font-weight="bold" fill="#fde68a" text-anchor="middle" letter-spacing="1">CRMS</text>
+  <text x="100" y="172" font-family="'Outfit', sans-serif, system-ui" font-size="7.5" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="2">CODE: 0538</text>
+</svg>

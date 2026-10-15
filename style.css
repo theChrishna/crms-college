@@ -1,0 +1,312 @@
+/* ==========================================================================
+   Captain Rakesh Mohan Shyam Degree College
+   College Code: 0538 | Bharnakalan, Mathura | DBRAU Agra
+   Unobstructed Image Showcase & Clean Header
+   ========================================================================== */
+
+:root {
+  --accent-gold: #f59e0b;
+  --accent-gold-light: #fde68a;
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background-color: #030712;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   Full Viewport Background Image Slider
+   -------------------------------------------------------------------------- */
+.slider {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Minimal & Clear Text
+   -------------------------------------------------------------------------- */
+.college-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 1.5rem 2rem 2.8rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 12, 24, 0.92) 0%,
+    rgba(6, 12, 24, 0.72) 45%,
+    rgba(6, 12, 24, 0.35) 75%,
+    transparent 100%
+  );
+  pointer-events: none; /* Allows clicking through gradient */
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  pointer-events: auto;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+}
+
+.title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.college-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.college-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  color: #e2e8f0;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.detail-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.sep {
+  opacity: 0.5;
+  color: var(--accent-gold);
+}
+
+.code-tag {
+  background: rgba(245, 158, 11, 0.22);
+  border: 1px solid rgba(245, 158, 11, 0.55);
+  color: var(--accent-gold-light);
+  padding: 0.15rem 0.65rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.code-tag strong {
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation Arrows (Left / Right)
+   -------------------------------------------------------------------------- */
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  background: rgba(9, 18, 36, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.nav-arrow:hover {
+  background: rgba(245, 158, 11, 0.85);
+  color: #0b1120;
+  border-color: var(--accent-gold);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+}
+
+.nav-arrow.prev {
+  left: 1.5rem;
+}
+
+.nav-arrow.next {
+  right: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom Bar: Caption & Thumbnails
+   -------------------------------------------------------------------------- */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 2.5rem 2rem 1.4rem;
+  background: linear-gradient(
+    to top,
+    rgba(6, 12, 24, 0.92) 0%,
+    rgba(6, 12, 24, 0.65) 50%,
+    rgba(6, 12, 24, 0.25) 75%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.caption {
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.thumbnails {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.thumb {
+  width: 72px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: #000;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+  opacity: 0.65;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb:hover {
+  opacity: 0.95;
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.thumb.active {
+  opacity: 1;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.7);
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Styles
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .college-header {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .header-inner {
+    gap: 0.85rem;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sep {
+    display: none;
+  }
+
+  .college-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .nav-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .nav-arrow.prev {
+    left: 0.6rem;
+  }
+
+  .nav-arrow.next {
+    right: 0.6rem;
+  }
+
+  .bottom-bar {
+    padding: 1.5rem 1rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    text-align: center;
+  }
+
+  .thumb {
+    width: 58px;
+    height: 38px;
+  }
+}
