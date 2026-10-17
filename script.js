@@ -1,6 +1,7 @@
 /**
- * Captain Rakesh Mohan Shyam Degree College
- * Official Degree College Website - Common Client Logic
+ * Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura
+ * Official Degree College Website - Client Logic
+ * Design & Interaction System: MIT Admissions Style
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,26 +11,85 @@ document.addEventListener('DOMContentLoaded', () => {
   yearEls.forEach(el => el.textContent = nowYear);
 
   // 2. Mobile Nav Toggle
-  const navToggle = document.getElementById('mobileNavToggle');
-  const mainNav = document.getElementById('mainNav');
+  const navTrigger = document.querySelector('.js-nav-trigger') || document.getElementById('mobileNavToggle');
+  const mainNav = document.getElementById('mainNav') || document.querySelector('.site-nav__links');
 
-  if (navToggle && mainNav) {
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !isExpanded);
+  if (navTrigger && mainNav) {
+    navTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = navTrigger.getAttribute('aria-expanded') === 'true';
+      navTrigger.setAttribute('aria-expanded', !isExpanded);
       mainNav.classList.toggle('active');
     });
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-      if (!navToggle.contains(e.target) && !mainNav.contains(e.target)) {
+      if (!navTrigger.contains(e.target) && !mainNav.contains(e.target)) {
         mainNav.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
+        navTrigger.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
-  // 3. Notice Category Filter (notices.html)
+  // 3. Search Topper Drawer (MIT Admissions Style)
+  const searchTriggers = document.querySelectorAll('.js-search-trigger');
+  const searchTopper = document.getElementById('search__topper');
+  const searchInput = document.getElementById('search-input');
+
+  if (searchTriggers.length > 0 && searchTopper) {
+    searchTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchTopper.classList.toggle('active');
+        if (searchTopper.classList.contains('active')) {
+          searchInput?.focus();
+        }
+      });
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchTopper.classList.contains('active')) {
+        searchTopper.classList.remove('active');
+      }
+    });
+  }
+
+  // 4. Teaser Feed: Condense | Expand View Toggle
+  const teaseCloseBtn = document.querySelector('.js-tease-close');
+  const teaseExpandBtn = document.querySelector('.js-tease-expand');
+  const teaseFeedMod = document.querySelector('.tease-feed-mod');
+
+  if (teaseCloseBtn && teaseExpandBtn && teaseFeedMod) {
+    teaseCloseBtn.addEventListener('click', () => {
+      teaseFeedMod.classList.add('tease-feed-mod--small');
+      teaseCloseBtn.classList.add('active');
+      teaseExpandBtn.classList.remove('active');
+    });
+
+    teaseExpandBtn.addEventListener('click', () => {
+      teaseFeedMod.classList.remove('tease-feed-mod--small');
+      teaseExpandBtn.classList.add('active');
+      teaseCloseBtn.classList.remove('active');
+    });
+  }
+
+  // 5. Highlights Carousel Controls
+  const carouselContainer = document.querySelector('.hp__highlights-container');
+  const prevBtn = document.querySelector('.js-carousel-prev');
+  const nextBtn = document.querySelector('.js-carousel-next');
+
+  if (carouselContainer && prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      carouselContainer.scrollBy({ left: -360, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      carouselContainer.scrollBy({ left: 360, behavior: 'smooth' });
+    });
+  }
+
+  // 6. Notice Category Filter & Search (notices.html)
   const filterBtns = document.querySelectorAll('.filter-btn');
   const noticeItems = document.querySelectorAll('.notice-item');
   const noticeSearchInput = document.getElementById('noticeSearch');
@@ -69,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 4. Faculty Department Filter (faculty.html)
+  // 7. Faculty Department Filter (faculty.html)
   const facultyFilterBtns = document.querySelectorAll('.faculty-filter-btn');
   const facultyCards = document.querySelectorAll('.faculty-card');
 
@@ -92,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Gallery Lightbox (gallery.html)
+  // 8. Gallery Lightbox (gallery.html)
   const lightboxModal = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
@@ -127,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Generic Form Handler with Spam Honeypot Check (Admissions / Contact)
+  // 9. Generic Enquiry Form Handler with Honeypot
   const enquiryForms = document.querySelectorAll('.enquiry-form');
 
   enquiryForms.forEach(form => {
@@ -144,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const statusEl = form.querySelector('.form-status');
       const submitBtn = form.querySelector('button[type="submit"]');
 
-      // Validation check
       const name = form.querySelector('[name="name"]')?.value.trim();
       const phone = form.querySelector('[name="phone"]')?.value.trim();
 
@@ -161,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.textContent = 'Submitting...';
       }
 
-      // Simulate reliable submission
       setTimeout(() => {
         if (statusEl) {
           statusEl.textContent = 'Thank you! Your enquiry has been recorded. The college admissions office will contact you shortly.';

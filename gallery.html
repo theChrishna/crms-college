@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Campus photo gallery of Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. Real photographs of academic wings, entrance block, and green sports grounds.">
-  <title>Campus Photo Gallery | Captain Rakesh Mohan Shyam Degree College</title>
-  <link rel="icon" type="image/svg+xml" href="college-logo.svg">
+  <meta name="description" content="Campus gallery of Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. Photos of academic buildings, lecture halls, laboratories, and sports grounds.">
+  <title>Photo Gallery | Captain Rakesh Mohan Shyam Degree College</title>
+  <link rel="icon" type="image/svg+xml" href="Captain.Rakesh-education-samiti.Black%201.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme--campus">
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-landmark" class="skip-to-content">Skip to content ↓</a>
 
   <!-- Top Utility Bar -->
   <div class="top-bar">
@@ -19,43 +22,128 @@
       <div class="top-bar-left">
         <span class="top-item"><span class="code-pill">COLLEGE CODE: 0538</span></span>
         <span class="top-item">🎓 Affiliated to <strong>Dr. B. R. Ambedkar University, Agra</strong></span>
+        <span class="top-item">📍 Bharnakalan, Mathura (U.P.)</span>
       </div>
       <div class="top-bar-right">
-        <a href="contact.html" class="top-link">Visit Campus in Mathura</a>
+        <a href="committees.html#anti-ragging" class="top-link">Anti-Ragging Helpline</a>
+        <a href="committees.html#rti" class="top-link">RTI Cell</a>
+        <a href="contact.html" class="top-link">Helpline & Contacts</a>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- MIT Admissions Style Header & Navigation -->
   <header class="site-header">
-    <div class="header-container">
-      <a href="index.html" class="brand-wrapper">
-        <img src="college-logo.svg" alt="CRMS College Logo" class="brand-logo" width="52" height="52">
-        <div class="brand-text">
-          <span class="brand-title">Captain Rakesh Mohan Shyam Degree College</span>
-          <span class="brand-subtitle">Bharnakalan, Mathura • Code: 0538</span>
+    <div class="site-nav-mod">
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <div class="site-nav--width">
+
+          <div class="site-nav__name">
+            <a class="site-nav__name-link" href="index.html" rel="home" aria-label="College Home">
+              <span class="crms-wordmark-logo">CRMS</span>
+              <img src="Captain.Rakesh-education-samiti.Black%201.svg" alt="Captain Rakesh Education Samiti Emblem" class="brand-logo" width="38" height="38">
+              <div class="site-nav__brand-info">
+                <span class="site-nav__brand-title">Captain Rakesh Mohan Shyam Degree College</span>
+                <span class="site-nav__brand-meta">Bharnakalan, Mathura • DBRAU Code: 0538</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="site-nav__menu-button">
+            <button class="site-nav__menu-trigger js-nav-trigger" aria-label="Toggle Navigation Menu" aria-expanded="false">Menu ↓</button>
+            <button class="site-nav__link--mag js-search-trigger" aria-label="Open Search">
+              <svg class="icon--mag-plus" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </button>
+          </div>
+
+          <ul class="site-nav__links" id="mainNav">
+            <li class="site-nav__link-item theme--discover">
+              <a class="site-nav__link" href="about.html">Discover ▾</a>
+              <ul class="site-nav__sub-nav-list">
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="about.html#overview">Vision & Mission</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="about.html#leadership">Management & Leadership</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="about.html#approvals">DBRAU Affiliation & Code 0538</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="facilities.html">Campus Life & Grounds</a></li>
+              </ul>
+            </li>
+
+            <li class="site-nav__link-item theme--apply">
+              <a class="site-nav__link" href="admissions.html">Apply ▾</a>
+              <ul class="site-nav__sub-nav-list">
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="admissions.html#process">Understanding the Process</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="admissions.html#eligibility">Eligibility Requirements</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="admissions.html#fees">Tuition & Fee Structure</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="admissions.html#enquiry">Online Enquiry Form</a></li>
+              </ul>
+            </li>
+
+            <li class="site-nav__link-item theme--academics">
+              <a class="site-nav__link" href="academics.html">Academics ▾</a>
+              <ul class="site-nav__sub-nav-list">
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="academics.html#courses">Undergraduate Degrees</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="academics.html#departments">Academic Departments</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="faculty.html">Faculty Directory</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="academics.html#calendar">Academic Calendar</a></li>
+              </ul>
+            </li>
+
+            <li class="site-nav__link-item theme--campus">
+              <a class="site-nav__link active" href="facilities.html">Campus ▾</a>
+              <ul class="site-nav__sub-nav-list">
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="facilities.html#labs">Science & Computer Labs</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="facilities.html#library">Central Library</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="facilities.html#sports">Sports Grounds</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="gallery.html">Photo & Media Gallery</a></li>
+              </ul>
+            </li>
+
+            <li class="site-nav__link-item theme--governance">
+              <a class="site-nav__link" href="committees.html">Governance ▾</a>
+              <ul class="site-nav__sub-nav-list">
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="committees.html#anti-ragging">Anti-Ragging Committee</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="committees.html#icc">Internal Complaints (ICC)</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="committees.html#grievance">Grievance Redressal</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="committees.html#rti">Right to Information (RTI)</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="committees.html#code-of-conduct">Code of Conduct</a></li>
+              </ul>
+            </li>
+
+            <li class="site-nav__link-item theme--notices">
+              <a class="site-nav__link" href="notices.html">Notices ▾</a>
+              <ul class="site-nav__sub-nav-list">
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="notices.html">All Notices & Circulars</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="notices.html?filter=exam">University Examination Orders</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="notices.html?filter=admission">Admission Notices</a></li>
+                <li class="site-nav__sub-nav-item"><a class="site-nav__sub-nav-link" href="notices.html?filter=scholarship">Scholarship Circulars</a></li>
+              </ul>
+            </li>
+
+            <li class="site-nav__link-item site-nav__link-item--mag">
+              <button class="site-nav__link--mag js-search-trigger" aria-label="Open Search Form">
+                <svg class="icon--mag-plus" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              </button>
+            </li>
+            <li class="site-nav__link-item"><a class="site-nav__apply-btn" href="admissions.html">Apply Now →</a></li>
+          </ul>
+
         </div>
-      </a>
-      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
-          <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
-          <li class="nav-item"><a href="faculty.html" class="nav-link">Faculty</a></li>
-          <li class="nav-item"><a href="committees.html" class="nav-link">Committees</a></li>
-          <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
-          <li class="nav-item"><a href="notices.html" class="nav-link">Notices</a></li>
-          <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="admissions.html" class="nav-link nav-cta">Apply Now</a></li>
-        </ul>
       </nav>
+    </div>
+
+    <div class="search__topper" id="search__topper">
+      <form class="search__form" role="search" action="notices.html" method="get">
+        <label class="search__label" for="search-input">Search Courses, Notices, Faculty, or Campus Information</label>
+        <div class="search__field-mod">
+          <input class="search__field" id="search-input" type="text" name="q" placeholder="What are you looking for?" autocomplete="off">
+          <button type="submit" class="search__button" aria-label="Search">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </button>
+        </div>
+      </form>
     </div>
   </header>
 
-  <!-- Breadcrumb -->
+  <!-- Breadcrumb Bar -->
   <nav class="breadcrumb-bar" aria-label="Breadcrumb">
     <div class="breadcrumb-container">
       <ol class="breadcrumb-list">
@@ -66,7 +154,7 @@
     </div>
   </nav>
 
-  <!-- Page Hero -->
+  <!-- Editorial Page Hero -->
   <div class="page-hero">
     <div class="page-hero-container">
       <h1 class="page-hero-title">Campus Photo Gallery</h1>
@@ -74,7 +162,7 @@
     </div>
   </div>
 
-  <main id="main-content">
+  <main class="main" id="main-landmark">
     <section class="section">
       <div class="section-container">
         
@@ -84,34 +172,34 @@
           <p class="section-desc">Click any photograph to view in full resolution.</p>
         </div>
 
-        <div class="gallery-grid">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem;">
           
           <!-- Photo 1: Academic Wing & Courtyard -->
-          <div class="gallery-card">
-            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Academic Wing & Courtyard">
-              <img src="images/campus-building.jpg" alt="College Campus Academic Wing and Flowerbeds" width="600" height="400" loading="lazy">
+          <div class="form-card" style="padding: 1rem;">
+            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Academic Wing & Courtyard" style="height: 240px;">
+              <img src="images/campus-building.jpg" alt="College Campus Academic Wing and Flowerbeds" loading="lazy">
             </div>
-            <div class="gallery-caption">
+            <div style="padding-top: 1rem; font-size: 0.95rem; font-weight: 700; color: var(--mit-black);">
               Main Academic Wing, Multi-Storey Classrooms & Flowerbeds
             </div>
           </div>
 
           <!-- Photo 2: Administrative Entrance -->
-          <div class="gallery-card">
-            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Administrative Entrance Block">
-              <img src="images/campus-entrance.jpg" alt="Administrative Wing Entrance with Round Porch" width="600" height="400" loading="lazy">
+          <div class="form-card" style="padding: 1rem;">
+            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Administrative Entrance Block" style="height: 240px;">
+              <img src="images/campus-entrance.jpg" alt="Administrative Wing Entrance with Round Porch" loading="lazy">
             </div>
-            <div class="gallery-caption">
+            <div style="padding-top: 1rem; font-size: 0.95rem; font-weight: 700; color: var(--mit-black);">
               Central Entrance, Administrative Block & Student Services
             </div>
           </div>
 
           <!-- Photo 3: Lush Green Playground & Campus Grounds -->
-          <div class="gallery-card">
-            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Green Campus Sports Grounds">
-              <img src="images/campus-grounds.jpg" alt="Spacious Green Playground and Campus Boundary" width="600" height="400" loading="lazy">
+          <div class="form-card" style="padding: 1rem;">
+            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Green Campus Sports Grounds" style="height: 240px;">
+              <img src="images/campus-grounds.jpg" alt="Spacious Green Playground and Campus Boundary" loading="lazy">
             </div>
-            <div class="gallery-caption">
+            <div style="padding-top: 1rem; font-size: 0.95rem; font-weight: 700; color: var(--mit-black);">
               Spacious Open Green Grounds & Sports Field
             </div>
           </div>
@@ -122,7 +210,7 @@
     </section>
   </main>
 
-  <!-- Lightbox Modal for Full View -->
+  <!-- Lightbox Modal -->
   <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Enlarged Campus View">
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">&times;</button>
@@ -130,62 +218,83 @@
     </div>
   </div>
 
-  <!-- Mobile Sticky Bar -->
-  <aside class="mobile-action-bar" aria-label="Quick Mobile Actions">
-    <div class="mobile-action-bar-inner">
-      <a href="tel:[PLACEHOLDER:Phone]" class="mobile-action-btn"><span class="btn-icon">📞</span><span>Call</span></a>
-      <a href="contact.html#enquiry" class="mobile-action-btn"><span class="btn-icon">💬</span><span>Enquire</span></a>
-      <a href="admissions.html" class="mobile-action-btn highlight"><span class="btn-icon">🎓</span><span>Admissions</span></a>
-    </div>
-  </aside>
+  <!-- MIT Admissions Signature Footer -->
+  <div class="site-footer-mod">
+    <footer class="site-footer">
+      <div class="site-footer__dome-badge">
+        <img src="Captain.Rakesh-education-samiti.Black%201.svg" alt="Captain Rakesh Education Samiti Emblem Silhouette" class="site-footer__dome-img">
+      </div>
+      <a class="site-footer__name-link" href="index.html">Captain Rakesh Mohan Shyam Degree College</a>
+      <p class="site-footer__text">
+        Affiliated to Dr. B. R. Ambedkar University, Agra (College Code: 0538). Dedicated to delivering accessible, high-quality, and value-grounded higher education in Arts, Science, and Commerce to students across Bharnakalan and Mathura district.
+      </p>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-title">Captain Rakesh Mohan Shyam Degree College</div>
-          <p class="footer-about-text">Affiliated to Dr. B. R. Ambedkar University, Agra • College Code: 0538.</p>
-          <div class="footer-contact-item"><span>📍</span><span>Bharnakalan, Mathura (U.P.)</span></div>
-        </div>
-        <div>
-          <h3 class="footer-heading">Academics</h3>
-          <ul class="footer-links">
-            <li><a href="academics.html#ba">B.A. Programme</a></li>
-            <li><a href="academics.html#bsc">B.Sc. Programme</a></li>
-            <li><a href="academics.html#bcom">B.Com. Programme</a></li>
-            <li><a href="admissions.html#fees">Fee Structure</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-heading">Compliance</h3>
-          <ul class="footer-links">
-            <li><a href="committees.html#anti-ragging">Anti-Ragging Cell</a></li>
-            <li><a href="committees.html#icc">ICC / POSH</a></li>
-            <li><a href="committees.html#grievance">Grievance Redressal</a></li>
-            <li><a href="committees.html#rti">RTI Cell</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-heading">Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="faculty.html">Faculty Directory</a></li>
-            <li><a href="facilities.html">Campus Facilities</a></li>
-            <li><a href="notices.html">Notices</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
+      <div class="site-footer__links-mod">
+        <dl class="site-footer__links">
+          <dt class="site-footer__item-label"><a class="site-footer__label-link" href="about.html">Discover</a></dt>
+          <dd class="site-footer__item"><a class="site-footer__link" href="about.html#overview">Vision & Mission</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="about.html#leadership">Management & Leadership</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="about.html#approvals">DBRAU Affiliation</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="about.html#values">Core Institutional Values</a></dd>
+        </dl>
+
+        <dl class="site-footer__links">
+          <dt class="site-footer__item-label"><a class="site-footer__label-link" href="admissions.html">Apply</a></dt>
+          <dd class="site-footer__item"><a class="site-footer__link" href="admissions.html#process">Application Process</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="admissions.html#eligibility">Eligibility Criteria</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="admissions.html#fees">Fee Structure</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="admissions.html#enquiry">Admission Enquiry</a></dd>
+        </dl>
+
+        <dl class="site-footer__links">
+          <dt class="site-footer__item-label"><a class="site-footer__label-link" href="academics.html">Academics</a></dt>
+          <dd class="site-footer__item"><a class="site-footer__link" href="academics.html#courses">B.A. (Bachelor of Arts)</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="academics.html#courses">B.Sc. (Bachelor of Science)</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="academics.html#courses">B.Com. (Commerce)</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="academics.html#calendar">Academic Calendar</a></dd>
+        </dl>
+
+        <dl class="site-footer__links">
+          <dt class="site-footer__item-label"><a class="site-footer__label-link" href="facilities.html">Campus</a></dt>
+          <dd class="site-footer__item"><a class="site-footer__link" href="faculty.html">Faculty Directory</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="facilities.html#labs">Science Laboratories</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="facilities.html#library">Central Library</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="gallery.html">Photo Gallery</a></dd>
+        </dl>
+
+        <dl class="site-footer__links">
+          <dt class="site-footer__item-label"><a class="site-footer__label-link" href="committees.html">Governance</a></dt>
+          <dd class="site-footer__item"><a class="site-footer__link" href="committees.html#anti-ragging">Anti-Ragging Committee</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="committees.html#icc">Internal Complaints (ICC)</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="committees.html#grievance">Grievance Redressal</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="committees.html#rti">Right to Information (RTI)</a></dd>
+        </dl>
+
+        <dl class="site-footer__links">
+          <dt class="site-footer__item-label"><a class="site-footer__label-link" href="notices.html">Notices & Help</a></dt>
+          <dd class="site-footer__item"><a class="site-footer__link" href="notices.html">Latest Circulars</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="contact.html">Contact Administration</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="contact.html#location">Campus Location</a></dd>
+          <dd class="site-footer__item"><a class="site-footer__link" href="admissions.html#scholarship">Scholarship Cell</a></dd>
+        </dl>
       </div>
-      <div class="footer-bottom">
-        <div>&copy; <span class="current-year">2026</span> Captain Rakesh Mohan Shyam Degree College. All rights reserved.</div>
-        <div class="footer-legal-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
-          <a href="accessibility.html">Accessibility</a>
+
+      <div class="site-footer__utility">
+        <div class="site-footer__utility-item--address">
+          Captain Rakesh Mohan Shyam Degree College, Village Bharnakalan, Post Bharnakalan, District Mathura, Uttar Pradesh - 281001 &middot; Affiliated to Dr. B. R. Ambedkar University, Agra &middot; College Code: 0538 &middot; Phone: <span class="placeholder-tag">[PLACEHOLDER: 0565-XXXXXXX]</span>
         </div>
+        <ul class="site-footer__utility-list">
+          <li><a class="site-footer__utility-link" href="about.html">About College</a></li>
+          <li><a class="site-footer__utility-link" href="committees.html#code-of-conduct">Mandatory Disclosure</a></li>
+          <li><a class="site-footer__utility-link" href="accessibility.html">Accessibility Statement</a></li>
+          <li><a class="site-footer__utility-link" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="site-footer__utility-link" href="terms.html">Terms of Use</a></li>
+          <li><a class="site-footer__utility-link" href="contact.html">Contact Us</a></li>
+          <li><span style="color: #666666;">© <span class="current-year">2026</span> CRMS Degree College. All rights reserved.</span></li>
+        </ul>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
