@@ -1,0 +1,52 @@
+[
+  {
+    "id": "not-01",
+    "title": "Admissions Open for Undergraduate Degree Courses (Session 2026-27)",
+    "date": "2026-10-15",
+    "category": "Admission",
+    "summary": "Applications are invited for admission to B.A., B.Sc., and B.Com. programmes for the academic session 2026-27. Prospective candidates can collect prospectus from the college office.",
+    "attachmentUrl": "#",
+    "published": true,
+    "isNew": true
+  },
+  {
+    "id": "not-02",
+    "title": "Dr. B. R. Ambedkar University Examination Schedule Notification",
+    "date": "2026-10-10",
+    "category": "Exam",
+    "summary": "Notification regarding upcoming university semester examination form submission dates and guidelines as issued by DBRAU Agra.",
+    "attachmentUrl": "#",
+    "published": true,
+    "isNew": true
+  },
+  {
+    "id": "not-03",
+    "title": "Annual National Sports & Physical Fitness Week",
+    "date": "2026-10-02",
+    "category": "Event",
+    "summary": "College will celebrate Annual Sports Week featuring inter-departmental track, cricket, volleyball, and athletic competitions on campus grounds.",
+    "attachmentUrl": "#",
+    "published": true,
+    "isNew": false
+  },
+  {
+    "id": "not-04",
+    "title": "Mandatory Anti-Ragging Undertaking for All Enrolled Students",
+    "date": "2026-09-20",
+    "category": "General",
+    "summary": "In compliance with UGC and Supreme Court regulations, all first-year and senior students must submit anti-ragging affidavits online via the national portal.",
+    "attachmentUrl": "#",
+    "published": true,
+    "isNew": false
+  },
+  {
+    "id": "not-05",
+    "title": "Scholarship Form Verification & Submission Circular (UP Govt)",
+    "date": "2026-09-12",
+    "category": "General",
+    "summary": "Eligible SC/ST/OBC and Minority students are advised to submit hard copies of their online scholarship applications along with attested documents at the administrative counter.",
+    "attachmentUrl": "#",
+    "published": true,
+    "isNew": false
+  }
+]

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Faculty and staff directory of Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. Teaching faculty across Arts, Science, and Commerce departments.">
+  <title>Faculty & Staff Directory | Captain Rakesh Mohan Shyam Degree College</title>
+  <link rel="icon" type="image/svg+xml" href="college-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.8rem;
+    }
+    .faculty-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .faculty-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+    .faculty-avatar-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 3px solid var(--border-light);
+      margin-bottom: 1rem;
+      background-color: var(--bg-surface-alt);
+    }
+    .faculty-avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .faculty-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.25rem;
+    }
+    .faculty-desig {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+    .faculty-dept {
+      font-size: 0.82rem;
+      background-color: var(--accent-blue-light);
+      color: var(--accent-blue);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+    .faculty-qual {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      border-top: 1px solid var(--border-light);
+      padding-top: 0.8rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-item"><span class="code-pill">COLLEGE CODE: 0538</span></span>
+        <span class="top-item">🎓 Affiliated to <strong>Dr. B. R. Ambedkar University, Agra</strong></span>
+      </div>
+      <div class="top-bar-right">
+        <a href="contact.html" class="top-link">Administrative Counter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="college-logo.svg" alt="CRMS College Logo" class="brand-logo" width="52" height="52">
+        <div class="brand-text">
+          <span class="brand-title">Captain Rakesh Mohan Shyam Degree College</span>
+          <span class="brand-subtitle">Bharnakalan, Mathura • Code: 0538</span>
+        </div>
+      </a>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
+          <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+          <li class="nav-item"><a href="faculty.html" class="nav-link active">Faculty</a></li>
+          <li class="nav-item"><a href="committees.html" class="nav-link">Committees</a></li>
+          <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link">Notices</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admissions.html" class="nav-link nav-cta">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li class="breadcrumb-item active" aria-current="page">Faculty & Staff Directory</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-container">
+      <h1 class="page-hero-title">Faculty & Staff Directory</h1>
+      <p class="page-hero-sub">Dedicated Academic Mentors Across Arts, Science & Commerce Departments</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="section-container">
+        
+        <!-- Department Filter Buttons -->
+        <div class="notice-filter-bar" style="justify-content: center; margin-bottom: 2.5rem;">
+          <button class="filter-btn faculty-filter-btn active" data-dept="all">All Departments</button>
+          <button class="filter-btn faculty-filter-btn" data-dept="Administration">Principal & Administration</button>
+          <button class="filter-btn faculty-filter-btn" data-dept="Arts">Arts & Humanities</button>
+          <button class="filter-btn faculty-filter-btn" data-dept="Science">Science</button>
+          <button class="filter-btn faculty-filter-btn" data-dept="Commerce">Commerce</button>
+        </div>
+
+        <!-- Faculty Cards Grid -->
+        <div class="faculty-grid">
+          
+          <!-- Principal -->
+          <div class="faculty-card" data-dept="Administration">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Principal Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Principal Name]</span></h3>
+            <div class="faculty-desig">Principal & Head of Institution</div>
+            <span class="faculty-dept">Administration</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> Ph.D., M.A. / M.Sc., NET Qualified<br>
+              <small style="color: var(--text-muted);">Academic Administrator</small>
+            </div>
+          </div>
+
+          <!-- Faculty 1 (Arts - Hindi) -->
+          <div class="faculty-card" data-dept="Arts">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor</div>
+            <span class="faculty-dept">Arts & Humanities (Hindi)</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.A. (Hindi), UGC-NET<br>
+              <small style="color: var(--text-muted);">Specialization: Hindi Literature</small>
+            </div>
+          </div>
+
+          <!-- Faculty 2 (Arts - Political Science) -->
+          <div class="faculty-card" data-dept="Arts">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor</div>
+            <span class="faculty-dept">Arts (Political Science)</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.A. (Pol. Sci.), UGC-NET<br>
+              <small style="color: var(--text-muted);">Specialization: Indian Political Thought</small>
+            </div>
+          </div>
+
+          <!-- Faculty 3 (Arts - History) -->
+          <div class="faculty-card" data-dept="Arts">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor</div>
+            <span class="faculty-dept">Arts & Humanities (History)</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.A. (History), B.Ed.<br>
+              <small style="color: var(--text-muted);">Specialization: Modern Indian History</small>
+            </div>
+          </div>
+
+          <!-- Faculty 4 (Science - Physics) -->
+          <div class="faculty-card" data-dept="Science">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor / Incharge</div>
+            <span class="faculty-dept">Science (Physics)</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.Sc. (Physics), CSIR-NET<br>
+              <small style="color: var(--text-muted);">Specialization: Solid State Physics</small>
+            </div>
+          </div>
+
+          <!-- Faculty 5 (Science - Chemistry) -->
+          <div class="faculty-card" data-dept="Science">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor</div>
+            <span class="faculty-dept">Science (Chemistry)</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.Sc. (Chemistry), Ph.D.<br>
+              <small style="color: var(--text-muted);">Specialization: Organic Chemistry</small>
+            </div>
+          </div>
+
+          <!-- Faculty 6 (Science - Mathematics) -->
+          <div class="faculty-card" data-dept="Science">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor</div>
+            <span class="faculty-dept">Science (Mathematics)</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.Sc. (Mathematics)<br>
+              <small style="color: var(--text-muted);">Specialization: Real Analysis & Algebra</small>
+            </div>
+          </div>
+
+          <!-- Faculty 7 (Commerce) -->
+          <div class="faculty-card" data-dept="Commerce">
+            <div class="faculty-avatar-wrap">
+              <img src="images/placeholder-avatar.svg" alt="Faculty Avatar" width="96" height="96">
+            </div>
+            <h3 class="faculty-name"><span class="placeholder-tag">[PLACEHOLDER: Faculty Name]</span></h3>
+            <div class="faculty-desig">Assistant Professor / Head</div>
+            <span class="faculty-dept">Commerce</span>
+            <div class="faculty-qual">
+              <strong>Qualification:</strong> M.Com., UGC-NET<br>
+              <small style="color: var(--text-muted);">Specialization: Financial Accounting & Taxation</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Privacy & Consent Notice (PRD Section 7.5) -->
+        <div style="margin-top: 3rem; background-color: var(--bg-surface-alt); padding: 1.25rem 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+          🔒 <strong>Privacy Policy Note:</strong> In accordance with institutional data protection standards and PRD Section 7.5, personal contact numbers and personal email addresses are not published without written consent. To contact any faculty member, please direct inquiries through the official college office.
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Sticky Bar -->
+  <aside class="mobile-action-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-action-bar-inner">
+      <a href="tel:[PLACEHOLDER:Phone]" class="mobile-action-btn"><span class="btn-icon">📞</span><span>Call</span></a>
+      <a href="contact.html#enquiry" class="mobile-action-btn"><span class="btn-icon">💬</span><span>Enquire</span></a>
+      <a href="admissions.html" class="mobile-action-btn highlight"><span class="btn-icon">🎓</span><span>Admissions</span></a>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Captain Rakesh Mohan Shyam Degree College</div>
+          <p class="footer-about-text">Affiliated to Dr. B. R. Ambedkar University, Agra • College Code: 0538.</p>
+          <div class="footer-contact-item"><span>📍</span><span>Bharnakalan, Mathura (U.P.)</span></div>
+        </div>
+        <div>
+          <h3 class="footer-heading">Academics</h3>
+          <ul class="footer-links">
+            <li><a href="academics.html#ba">B.A. Programme</a></li>
+            <li><a href="academics.html#bsc">B.Sc. Programme</a></li>
+            <li><a href="academics.html#bcom">B.Com. Programme</a></li>
+            <li><a href="admissions.html#fees">Fee Structure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Compliance</h3>
+          <ul class="footer-links">
+            <li><a href="committees.html#anti-ragging">Anti-Ragging Cell</a></li>
+            <li><a href="committees.html#icc">ICC / POSH</a></li>
+            <li><a href="committees.html#grievance">Grievance Redressal</a></li>
+            <li><a href="committees.html#rti">RTI Cell</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="faculty.html">Faculty Directory</a></li>
+            <li><a href="facilities.html">Campus Facilities</a></li>
+            <li><a href="notices.html">Notices</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Captain Rakesh Mohan Shyam Degree College. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="accessibility.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

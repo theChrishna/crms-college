@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus photo gallery of Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. Real photographs of academic wings, entrance block, and green sports grounds.">
+  <title>Campus Photo Gallery | Captain Rakesh Mohan Shyam Degree College</title>
+  <link rel="icon" type="image/svg+xml" href="college-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-item"><span class="code-pill">COLLEGE CODE: 0538</span></span>
+        <span class="top-item">🎓 Affiliated to <strong>Dr. B. R. Ambedkar University, Agra</strong></span>
+      </div>
+      <div class="top-bar-right">
+        <a href="contact.html" class="top-link">Visit Campus in Mathura</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="college-logo.svg" alt="CRMS College Logo" class="brand-logo" width="52" height="52">
+        <div class="brand-text">
+          <span class="brand-title">Captain Rakesh Mohan Shyam Degree College</span>
+          <span class="brand-subtitle">Bharnakalan, Mathura • Code: 0538</span>
+        </div>
+      </a>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
+          <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+          <li class="nav-item"><a href="faculty.html" class="nav-link">Faculty</a></li>
+          <li class="nav-item"><a href="committees.html" class="nav-link">Committees</a></li>
+          <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link">Notices</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admissions.html" class="nav-link nav-cta">Apply Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li class="breadcrumb-item active" aria-current="page">Campus Gallery</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-container">
+      <h1 class="page-hero-title">Campus Photo Gallery</h1>
+      <p class="page-hero-sub">Original Campus Views, Academic Infrastructure & Green Grounds in Bharnakalan, Mathura</p>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-tag">Campus Glimpses</span>
+          <h2 class="section-title">Visual Tour of Our Institution</h2>
+          <p class="section-desc">Click any photograph to view in full resolution.</p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Photo 1: Academic Wing & Courtyard -->
+          <div class="gallery-card">
+            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Academic Wing & Courtyard">
+              <img src="images/campus-building.jpg" alt="College Campus Academic Wing and Flowerbeds" width="600" height="400" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              Main Academic Wing, Multi-Storey Classrooms & Flowerbeds
+            </div>
+          </div>
+
+          <!-- Photo 2: Administrative Entrance -->
+          <div class="gallery-card">
+            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Administrative Entrance Block">
+              <img src="images/campus-entrance.jpg" alt="Administrative Wing Entrance with Round Porch" width="600" height="400" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              Central Entrance, Administrative Block & Student Services
+            </div>
+          </div>
+
+          <!-- Photo 3: Lush Green Playground & Campus Grounds -->
+          <div class="gallery-card">
+            <div class="gallery-img-wrap" tabindex="0" role="button" aria-label="Open image of Green Campus Sports Grounds">
+              <img src="images/campus-grounds.jpg" alt="Spacious Green Playground and Campus Boundary" width="600" height="400" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              Spacious Open Green Grounds & Sports Field
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal for Full View -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Enlarged Campus View">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">&times;</button>
+      <img src="" alt="Enlarged Campus Photo" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- Mobile Sticky Bar -->
+  <aside class="mobile-action-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-action-bar-inner">
+      <a href="tel:[PLACEHOLDER:Phone]" class="mobile-action-btn"><span class="btn-icon">📞</span><span>Call</span></a>
+      <a href="contact.html#enquiry" class="mobile-action-btn"><span class="btn-icon">💬</span><span>Enquire</span></a>
+      <a href="admissions.html" class="mobile-action-btn highlight"><span class="btn-icon">🎓</span><span>Admissions</span></a>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Captain Rakesh Mohan Shyam Degree College</div>
+          <p class="footer-about-text">Affiliated to Dr. B. R. Ambedkar University, Agra • College Code: 0538.</p>
+          <div class="footer-contact-item"><span>📍</span><span>Bharnakalan, Mathura (U.P.)</span></div>
+        </div>
+        <div>
+          <h3 class="footer-heading">Academics</h3>
+          <ul class="footer-links">
+            <li><a href="academics.html#ba">B.A. Programme</a></li>
+            <li><a href="academics.html#bsc">B.Sc. Programme</a></li>
+            <li><a href="academics.html#bcom">B.Com. Programme</a></li>
+            <li><a href="admissions.html#fees">Fee Structure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Compliance</h3>
+          <ul class="footer-links">
+            <li><a href="committees.html#anti-ragging">Anti-Ragging Cell</a></li>
+            <li><a href="committees.html#icc">ICC / POSH</a></li>
+            <li><a href="committees.html#grievance">Grievance Redressal</a></li>
+            <li><a href="committees.html#rti">RTI Cell</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="faculty.html">Faculty Directory</a></li>
+            <li><a href="facilities.html">Campus Facilities</a></li>
+            <li><a href="notices.html">Notices</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Captain Rakesh Mohan Shyam Degree College. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="accessibility.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

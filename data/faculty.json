@@ -1,0 +1,74 @@
+[
+  {
+    "id": "fac-01",
+    "name": "[PLACEHOLDER: Principal Name]",
+    "designation": "Principal & Head of Institution",
+    "department": "Administration & Academics",
+    "qualification": "Ph.D., M.A. / M.Sc., NET / SLET Qualified",
+    "experience": "[PLACEHOLDER: Years of Experience]",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-02",
+    "name": "[PLACEHOLDER: Faculty Name - Hindi]",
+    "designation": "Assistant Professor / Head",
+    "department": "Arts & Humanities",
+    "subject": "Hindi Literature",
+    "qualification": "M.A. (Hindi), UGC-NET",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-03",
+    "name": "[PLACEHOLDER: Faculty Name - Political Science]",
+    "designation": "Assistant Professor",
+    "department": "Arts & Humanities",
+    "subject": "Political Science",
+    "qualification": "M.A. (Political Science), UGC-NET",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-04",
+    "name": "[PLACEHOLDER: Faculty Name - History]",
+    "designation": "Assistant Professor",
+    "department": "Arts & Humanities",
+    "subject": "History",
+    "qualification": "M.A. (History), B.Ed.",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-05",
+    "name": "[PLACEHOLDER: Faculty Name - Physics]",
+    "designation": "Assistant Professor / Head",
+    "department": "Science",
+    "subject": "Physics",
+    "qualification": "M.Sc. (Physics), UGC-CSIR NET",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-06",
+    "name": "[PLACEHOLDER: Faculty Name - Chemistry]",
+    "designation": "Assistant Professor",
+    "department": "Science",
+    "subject": "Chemistry",
+    "qualification": "M.Sc. (Organic Chemistry), Ph.D.",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-07",
+    "name": "[PLACEHOLDER: Faculty Name - Mathematics]",
+    "designation": "Assistant Professor",
+    "department": "Science",
+    "subject": "Mathematics",
+    "qualification": "M.Sc. (Mathematics)",
+    "photo": "images/placeholder-avatar.svg"
+  },
+  {
+    "id": "fac-08",
+    "name": "[PLACEHOLDER: Faculty Name - Commerce]",
+    "designation": "Assistant Professor / Head",
+    "department": "Commerce",
+    "subject": "Financial Accounting & Business Law",
+    "qualification": "M.Com., UGC-NET",
+    "photo": "images/placeholder-avatar.svg"
+  }
+]

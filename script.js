@@ -1,65 +1,178 @@
 /**
  * Captain Rakesh Mohan Shyam Degree College
- * Fullscreen Campus Photo Showcase
+ * Official Degree College Website - Common Client Logic
  */
+
 document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.slide');
-  const thumbs = document.querySelectorAll('.thumb');
-  const caption = document.getElementById('caption');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+  // 1. Dynamic Year in Footer
+  const yearEls = document.querySelectorAll('.current-year');
+  const nowYear = new Date().getFullYear();
+  yearEls.forEach(el => el.textContent = nowYear);
 
-  let currentIndex = 0;
-  const total = slides.length;
-  let timer = null;
+  // 2. Mobile Nav Toggle
+  const navToggle = document.getElementById('mobileNavToggle');
+  const mainNav = document.getElementById('mainNav');
 
-  function setSlide(index) {
-    if (index < 0) index = total - 1;
-    if (index >= total) index = 0;
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('active');
+    });
 
-    slides.forEach((s, i) => s.classList.toggle('active', i === index));
-    thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
-
-    const activeSlide = slides[index];
-    if (caption && activeSlide) {
-      caption.textContent = activeSlide.getAttribute('data-title') || '';
-    }
-
-    currentIndex = index;
-
-    // Reset auto-advance timer
-    clearInterval(timer);
-    timer = setInterval(() => setSlide(currentIndex + 1), 5000);
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !mainNav.contains(e.target)) {
+        mainNav.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
-  // Navigation arrows
-  prevBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setSlide(currentIndex - 1);
-  });
+  // 3. Notice Category Filter (notices.html)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const noticeItems = document.querySelectorAll('.notice-item');
+  const noticeSearchInput = document.getElementById('noticeSearch');
 
-  nextBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setSlide(currentIndex + 1);
-  });
+  if (filterBtns.length > 0 && noticeItems.length > 0) {
+    function filterNotices() {
+      const activeBtn = document.querySelector('.filter-btn.active');
+      const selectedCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
+      const searchQuery = noticeSearchInput ? noticeSearchInput.value.toLowerCase().trim() : '';
 
-  // Thumbnail buttons
-  thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('click', (e) => {
-      e.stopPropagation();
-      setSlide(i);
+      noticeItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        const itemTitle = item.querySelector('.notice-item-title')?.textContent.toLowerCase() || '';
+        const itemDesc = item.querySelector('.notice-item-desc')?.textContent.toLowerCase() || '';
+
+        const matchesCategory = selectedCategory === 'all' || itemCategory === selectedCategory;
+        const matchesSearch = searchQuery === '' || itemTitle.includes(searchQuery) || itemDesc.includes(searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterNotices();
+      });
+    });
+
+    if (noticeSearchInput) {
+      noticeSearchInput.addEventListener('input', filterNotices);
+    }
+  }
+
+  // 4. Faculty Department Filter (faculty.html)
+  const facultyFilterBtns = document.querySelectorAll('.faculty-filter-btn');
+  const facultyCards = document.querySelectorAll('.faculty-card');
+
+  if (facultyFilterBtns.length > 0 && facultyCards.length > 0) {
+    facultyFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        facultyFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const dept = btn.getAttribute('data-dept');
+
+        facultyCards.forEach(card => {
+          const cardDept = card.getAttribute('data-dept');
+          if (dept === 'all' || cardDept === dept) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // 5. Gallery Lightbox (gallery.html)
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const galleryItems = document.querySelectorAll('.gallery-img-wrap');
+
+  if (lightboxModal && lightboxImg && galleryItems.length > 0) {
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt || 'Campus Photo';
+          lightboxModal.classList.add('active');
+        }
+      });
+    });
+
+    lightboxClose?.addEventListener('click', () => {
+      lightboxModal.classList.remove('active');
+    });
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.remove('active');
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+        lightboxModal.classList.remove('active');
+      }
+    });
+  }
+
+  // 6. Generic Form Handler with Spam Honeypot Check (Admissions / Contact)
+  const enquiryForms = document.querySelectorAll('.enquiry-form');
+
+  enquiryForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Honeypot check
+      const honeypot = form.querySelector('input[name="website_hp"]');
+      if (honeypot && honeypot.value.trim() !== '') {
+        console.warn('Spam submission detected and blocked.');
+        return;
+      }
+
+      const statusEl = form.querySelector('.form-status');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      // Validation check
+      const name = form.querySelector('[name="name"]')?.value.trim();
+      const phone = form.querySelector('[name="phone"]')?.value.trim();
+
+      if (!name || !phone) {
+        if (statusEl) {
+          statusEl.textContent = 'Please fill in all required fields (Name and Mobile Number).';
+          statusEl.className = 'form-status error';
+        }
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      }
+
+      // Simulate reliable submission
+      setTimeout(() => {
+        if (statusEl) {
+          statusEl.textContent = 'Thank you! Your enquiry has been recorded. The college admissions office will contact you shortly.';
+          statusEl.className = 'form-status success';
+        }
+        form.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Enquiry';
+        }
+      }, 700);
     });
   });
-
-  // Keyboard navigation
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === ' ') {
-      setSlide(currentIndex + 1);
-    } else if (e.key === 'ArrowLeft') {
-      setSlide(currentIndex - 1);
-    }
-  });
-
-  // Start with first slide
-  setSlide(0);
 });

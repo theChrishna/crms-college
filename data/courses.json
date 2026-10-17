@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ba",
+    "name": "Bachelor of Arts (B.A.)",
+    "faculty": "Faculty of Arts & Humanities",
+    "level": "Undergraduate",
+    "duration": "3 Years (6 Semesters) under NEP 2020",
+    "intake": "[PLACEHOLDER: Official Sanctioned Intake, e.g. 400 Seats]",
+    "eligibility": "10+2 (Intermediate) or equivalent examination from a recognized board in any stream (Arts, Science, Commerce).",
+    "subjects": [
+      "Hindi Literature",
+      "English Literature",
+      "History",
+      "Political Science",
+      "Sociology",
+      "Economics",
+      "Geography"
+    ],
+    "feeSummary": "[PLACEHOLDER: As prescribed by DBRAU Agra and State Fee Regulatory Committee]",
+    "description": "Comprehensive degree curriculum designed to develop critical thinking, communication skills, and in-depth cultural, historical, and socio-economic perspectives."
+  },
+  {
+    "id": "bsc",
+    "name": "Bachelor of Science (B.Sc.)",
+    "faculty": "Faculty of Science",
+    "level": "Undergraduate",
+    "duration": "3 Years (6 Semesters) under NEP 2020",
+    "intake": "[PLACEHOLDER: Official Sanctioned Intake, e.g. 120 Seats]",
+    "eligibility": "10+2 (Intermediate) with Science stream (Mathematics or Biology group) with minimum qualifying marks from recognized board.",
+    "subjects": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Zoology",
+      "Botany"
+    ],
+    "feeSummary": "[PLACEHOLDER: As prescribed by DBRAU Agra and State Fee Regulatory Committee]",
+    "description": "Hands-on scientific education with practical laboratory training, empirical investigation methods, and rigorous theoretical foundations in natural and physical sciences."
+  },
+  {
+    "id": "bcom",
+    "name": "Bachelor of Commerce (B.Com.)",
+    "faculty": "Faculty of Commerce",
+    "level": "Undergraduate",
+    "duration": "3 Years (6 Semesters) under NEP 2020",
+    "intake": "[PLACEHOLDER: Official Sanctioned Intake, e.g. 120 Seats]",
+    "eligibility": "10+2 (Intermediate) with Commerce or Science/Arts with Mathematics from a recognized education board.",
+    "subjects": [
+      "Financial Accounting",
+      "Business Law & Regulatory Framework",
+      "Business Organisation & Management",
+      "Corporate Accounting",
+      "Income Tax & Auditing",
+      "Banking & Financial Systems"
+    ],
+    "feeSummary": "[PLACEHOLDER: As prescribed by DBRAU Agra and State Fee Regulatory Committee]",
+    "description": "Professional commerce education focusing on financial reporting, taxation, commercial legislation, trade, banking operations, and corporate management."
+  }
+]

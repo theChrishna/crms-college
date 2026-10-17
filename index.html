@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. Affiliated with Dr. B. R. Ambedkar University, Agra. College Code: 0538.">
-  <title>Captain Rakesh Mohan Shyam Degree College | Mathura (Code: 0538)</title>
+  <meta name="description" content="Official website of Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. Affiliated to Dr. B. R. Ambedkar University, Agra. College Code: 0538. Offering B.A., B.Sc., B.Com.">
+  <meta name="keywords" content="Captain Rakesh Mohan Shyam Degree College, CRMS Degree College, Bharnakalan Mathura, DBRAU Agra, College Code 0538, Degree College Mathura, BA BSc BCom Admission">
+  <title>Captain Rakesh Mohan Shyam Degree College | Bharnakalan, Mathura (Code: 0538)</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="college-logo.svg">
@@ -12,53 +13,551 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Captain Rakesh Mohan Shyam Degree College",
+    "alternateName": "CRMS Degree College",
+    "identifier": "0538",
+    "url": "https://crms-college.pages.dev",
+    "logo": "https://crms-college.pages.dev/college-logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bharnakalan",
+      "addressRegion": "Mathura, Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Dr. B. R. Ambedkar University, Agra"
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Fullscreen Campus Background Images -->
-  <div class="slider" id="slider">
-    <div class="slide active" style="background-image: url('images/campus-building.jpg');" data-title="College Campus & Academic Wing"></div>
-    <div class="slide" style="background-image: url('images/campus-entrance.jpg');" data-title="Administrative Entrance & Porch"></div>
-    <div class="slide" style="background-image: url('images/campus-grounds.jpg');" data-title="Lush Green Campus & Sports Grounds"></div>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-item"><span class="code-pill">COLLEGE CODE: 0538</span></span>
+        <span class="top-item">🎓 Affiliated to <strong>Dr. B. R. Ambedkar University, Agra</strong></span>
+        <span class="top-item">📍 Bharnakalan, Mathura (U.P.)</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="committees.html#anti-ragging" class="top-link">Anti-Ragging Helpline</a>
+        <a href="committees.html#rti" class="top-link">RTI Cell</a>
+        <a href="contact.html" class="top-link">Helpline & Contacts</a>
+      </div>
+    </div>
   </div>
 
-  <!-- Unobtrusive Top Bar with Just the College Text -->
-  <header class="college-header">
-    <div class="header-inner">
-      <img src="college-logo.svg" alt="College Logo" class="logo">
-      <div class="title-wrap">
-        <h1 class="college-name">Captain Rakesh Mohan Shyam Degree College</h1>
-        <p class="college-details">
-          <span class="detail-item">📍 Bharnakalan, Mathura</span>
-          <span class="sep">•</span>
-          <span class="detail-item">🎓 Affiliated with Dr. B. R. Ambedkar University, Agra</span>
-          <span class="sep">•</span>
-          <span class="detail-item code-tag">College Code: <strong>0538</strong></span>
-        </p>
-      </div>
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper" aria-label="College Home">
+        <img src="college-logo.svg" alt="CRMS College Seal" class="brand-logo" width="52" height="52">
+        <div class="brand-text">
+          <span class="brand-title">Captain Rakesh Mohan Shyam Degree College</span>
+          <span class="brand-subtitle">Bharnakalan, Mathura • Code: 0538</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          
+          <li class="nav-item has-dropdown">
+            <a href="about.html" class="nav-link">About ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="about.html#overview">Vision & Mission</a></li>
+              <li class="dropdown-item"><a href="about.html#leadership">Management & Leadership</a></li>
+              <li class="dropdown-item"><a href="about.html#approvals">Approvals & Affiliation</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="academics.html" class="nav-link">Academics ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="academics.html#courses">Programmes Offered (B.A., B.Sc., B.Com.)</a></li>
+              <li class="dropdown-item"><a href="academics.html#departments">Academic Departments</a></li>
+              <li class="dropdown-item"><a href="academics.html#calendar">Academic Calendar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="admissions.html" class="nav-link">Admissions ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="admissions.html#process">Eligibility & Process</a></li>
+              <li class="dropdown-item"><a href="admissions.html#fees">Fee Structure & Refund</a></li>
+              <li class="dropdown-item"><a href="admissions.html#enquiry">Admission Enquiry Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="faculty.html" class="nav-link">Faculty</a></li>
+          
+          <li class="nav-item has-dropdown">
+            <a href="committees.html" class="nav-link">Committees ▾</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="committees.html#anti-ragging">Anti-Ragging Committee</a></li>
+              <li class="dropdown-item"><a href="committees.html#icc">Internal Complaints (ICC)</a></li>
+              <li class="dropdown-item"><a href="committees.html#grievance">Grievance Redressal</a></li>
+              <li class="dropdown-item"><a href="committees.html#rti">Right to Information (RTI)</a></li>
+              <li class="dropdown-item"><a href="committees.html#code-of-conduct">Code of Conduct</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link">Notices</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admissions.html" class="nav-link nav-cta">Apply Now</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Navigation Arrows -->
-  <button class="nav-arrow prev" id="prevBtn" title="Previous Image" aria-label="Previous Image">&#10094;</button>
-  <button class="nav-arrow next" id="nextBtn" title="Next Image" aria-label="Next Image">&#10095;</button>
+  <!-- Live Notice Ticker Banner -->
+  <aside class="notice-ticker-bar" aria-label="Latest College Notices">
+    <div class="ticker-inner">
+      <span class="ticker-label">📢 Notice</span>
+      <div class="ticker-content">
+        <span class="ticker-text">Admissions Open for B.A., B.Sc., and B.Com. for Academic Session 2026-27 • Verification of Scholarship Forms in Progress</span>
+      </div>
+      <a href="notices.html" class="ticker-view-all">View All Notices →</a>
+    </div>
+  </aside>
 
-  <!-- Bottom Bar: Caption and Thumbnails -->
-  <footer class="bottom-bar">
-    <div class="caption" id="caption">College Campus & Academic Wing</div>
-    <div class="thumbnails">
-      <button class="thumb active" data-index="0" title="View Campus & Academic Wing">
-        <img src="images/campus-building.jpg" alt="Building">
-      </button>
-      <button class="thumb" data-index="1" title="View Administrative Entrance">
-        <img src="images/campus-entrance.jpg" alt="Entrance">
-      </button>
-      <button class="thumb" data-index="2" title="View Campus Grounds">
-        <img src="images/campus-grounds.jpg" alt="Grounds">
-      </button>
+  <!-- Main Page Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="College Introduction">
+      <img src="images/campus-building.jpg" alt="College Campus Building" class="hero-bg-image" width="1280" height="720">
+      <div class="hero-overlay"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">🏛️ College Code: 0538 • Affiliated to DBRAU Agra</div>
+          <h1 class="hero-title">
+            Captain Rakesh Mohan Shyam <span class="highlight">Degree College</span>
+          </h1>
+          <p class="hero-subtitle">
+            Dedicated to academic excellence, disciplined character development, and empowering rural and semi-urban youth through recognized undergraduate education in Bharnakalan, Mathura.
+          </p>
+          <div class="hero-actions">
+            <a href="admissions.html" class="btn btn-primary">Admissions 2026–27</a>
+            <a href="contact.html#enquiry" class="btn btn-secondary">Enquire Now</a>
+          </div>
+        </div>
+
+        <!-- Featured Institutional Highlights Card -->
+        <div class="hero-card">
+          <h2 class="hero-card-title">Key Institutional Facts</h2>
+          <ul class="hero-card-list">
+            <li class="hero-card-item">
+              <span class="hero-card-icon">🏛️</span>
+              <div>
+                <strong>Official University Affiliation</strong><br>
+                Affiliated to Dr. B. R. Ambedkar University, Agra
+              </div>
+            </li>
+            <li class="hero-card-item">
+              <span class="hero-card-icon">📜</span>
+              <div>
+                <strong>Institutional Code</strong><br>
+                College Code: <strong>0538</strong>
+              </div>
+            </li>
+            <li class="hero-card-item">
+              <span class="hero-card-icon">📚</span>
+              <div>
+                <strong>Programmes Offered</strong><br>
+                B.A., B.Sc., B.Com. (NEP 2020 Curricula)
+              </div>
+            </li>
+            <li class="hero-card-item">
+              <span class="hero-card-icon">📍</span>
+              <div>
+                <strong>Campus Location</strong><br>
+                Bharnakalan, District Mathura, Uttar Pradesh
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Grid -->
+    <section class="quick-links-section" aria-label="Quick Access">
+      <div class="quick-links-grid">
+        <a href="admissions.html" class="quick-tile">
+          <span class="quick-tile-icon">📝</span>
+          <span>Admissions</span>
+        </a>
+        <a href="academics.html#courses" class="quick-tile">
+          <span class="quick-tile-icon">🎓</span>
+          <span>Courses</span>
+        </a>
+        <a href="admissions.html#fees" class="quick-tile">
+          <span class="quick-tile-icon">💳</span>
+          <span>Fee Structure</span>
+        </a>
+        <a href="faculty.html" class="quick-tile">
+          <span class="quick-tile-icon">👨‍🏫</span>
+          <span>Faculty Directory</span>
+        </a>
+        <a href="notices.html" class="quick-tile">
+          <span class="quick-tile-icon">📋</span>
+          <span>Notices & Circulars</span>
+        </a>
+        <a href="committees.html" class="quick-tile">
+          <span class="quick-tile-icon">⚖️</span>
+          <span>Committees & RTI</span>
+        </a>
+        <a href="contact.html" class="quick-tile">
+          <span class="quick-tile-icon">📞</span>
+          <span>Contact & Visit</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Snippet Section -->
+    <section class="section" id="about-snippet">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">About The College</span>
+          <h2 class="section-title">Rooted in Values, Committed to Academic Growth</h2>
+          <p class="section-desc">
+            Captain Rakesh Mohan Shyam Degree College is established with the vision of providing accessible, high-quality higher education to students of Bharnakalan, Mathura, and adjoining rural regions.
+          </p>
+        </div>
+
+        <div style="max-width: 860px; margin: 0 auto; text-align: center; color: var(--text-body); font-size: 1.05rem; line-height: 1.8;">
+          <p style="margin-bottom: 1.5rem;">
+            Affiliated to Dr. B. R. Ambedkar University, Agra, the institution adheres strictly to university syllabi, state educational policies, and the National Education Policy (NEP) 2020. Our sprawling green campus offers an intellectually invigorating environment, spacious lecture halls, practical labs, and comprehensive student support.
+          </p>
+          <a href="about.html" class="btn btn-primary">Read More About History & Governance →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Strip -->
+    <section class="section section-alt" id="leadership">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Institutional Leadership</span>
+          <h2 class="section-title">Guiding With Vision & Integrity</h2>
+          <p class="section-desc">Dedicated management and academic officers ensuring quality higher education and student welfare.</p>
+        </div>
+
+        <div class="leadership-grid">
+          <!-- Chairman -->
+          <div class="leadership-card">
+            <div class="leadership-photo-wrap">
+              <img src="images/placeholder-avatar.svg" alt="College Chairman" width="110" height="110">
+            </div>
+            <h3 class="leadership-name">[PLACEHOLDER: Chairman Name]</h3>
+            <div class="leadership-role">Chairman</div>
+            <p class="leadership-quote">
+              "Our mission is to empower every young mind entering our gates with knowledge, moral integrity, and social responsibility."
+            </p>
+          </div>
+
+          <!-- Manager / Secretary -->
+          <div class="leadership-card">
+            <div class="leadership-photo-wrap">
+              <img src="images/placeholder-avatar.svg" alt="College Manager" width="110" height="110">
+            </div>
+            <h3 class="leadership-name">[PLACEHOLDER: Manager Name]</h3>
+            <div class="leadership-role">Manager / Secretary</div>
+            <p class="leadership-quote">
+              "We strive to maintain modern infrastructure, transparent administration, and an encouraging learning atmosphere for all students."
+            </p>
+          </div>
+
+          <!-- Principal -->
+          <div class="leadership-card">
+            <div class="leadership-photo-wrap">
+              <img src="images/placeholder-avatar.svg" alt="College Principal" width="110" height="110">
+            </div>
+            <h3 class="leadership-name">[PLACEHOLDER: Principal Name]</h3>
+            <div class="leadership-role">Principal / Head of Institution</div>
+            <p class="leadership-quote">
+              "Academic rigor combined with co-curricular opportunities prepares our graduates to excel in competitive exams and higher careers."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Overview Section -->
+    <section class="section" id="courses">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Academic Programmes</span>
+          <h2 class="section-title">Undergraduate Degree Courses Offered</h2>
+          <p class="section-desc">Three-year degree courses affiliated to Dr. B. R. Ambedkar University, Agra following NEP 2020 semester framework.</p>
+        </div>
+
+        <div class="course-grid">
+          <!-- B.A. Card -->
+          <div class="course-card">
+            <span class="course-badge">Undergraduate • 3 Years</span>
+            <h3 class="course-title">Bachelor of Arts (B.A.)</h3>
+            <p class="course-desc">
+              Foundational humanities and social sciences degree covering Hindi, English, History, Political Science, Economics, and Sociology.
+            </p>
+            <div class="course-meta">
+              <div><strong>Eligibility:</strong> 10+2 in any stream from recognized board</div>
+              <div><strong>Sanctioned Intake:</strong> <span class="placeholder-tag">[PLACEHOLDER: Intake]</span></div>
+              <div><strong>Affiliation:</strong> Dr. B. R. Ambedkar University, Agra</div>
+            </div>
+            <a href="academics.html#ba" class="btn btn-secondary" style="color: var(--primary-navy); border-color: var(--border-medium);">View Syllabus & Details →</a>
+          </div>
+
+          <!-- B.Sc. Card -->
+          <div class="course-card">
+            <span class="course-badge">Undergraduate • 3 Years</span>
+            <h3 class="course-title">Bachelor of Science (B.Sc.)</h3>
+            <p class="course-desc">
+              Rigorous scientific curriculum offering Mathematics, Physics, Chemistry, Botany, and Zoology with practical laboratory training.
+            </p>
+            <div class="course-meta">
+              <div><strong>Eligibility:</strong> 10+2 with Science stream (PCM / ZBC)</div>
+              <div><strong>Sanctioned Intake:</strong> <span class="placeholder-tag">[PLACEHOLDER: Intake]</span></div>
+              <div><strong>Affiliation:</strong> Dr. B. R. Ambedkar University, Agra</div>
+            </div>
+            <a href="academics.html#bsc" class="btn btn-secondary" style="color: var(--primary-navy); border-color: var(--border-medium);">View Syllabus & Details →</a>
+          </div>
+
+          <!-- B.Com. Card -->
+          <div class="course-card">
+            <span class="course-badge">Undergraduate • 3 Years</span>
+            <h3 class="course-title">Bachelor of Commerce (B.Com.)</h3>
+            <p class="course-desc">
+              Comprehensive business and commerce training covering Financial Accounting, Business Law, Income Tax, Banking, and Corporate Auditing.
+            </p>
+            <div class="course-meta">
+              <div><strong>Eligibility:</strong> 10+2 in Commerce or equivalent stream</div>
+              <div><strong>Sanctioned Intake:</strong> <span class="placeholder-tag">[PLACEHOLDER: Intake]</span></div>
+              <div><strong>Affiliation:</strong> Dr. B. R. Ambedkar University, Agra</div>
+            </div>
+            <a href="academics.html#bcom" class="btn btn-secondary" style="color: var(--primary-navy); border-color: var(--border-medium);">View Syllabus & Details →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Highlights Section -->
+    <section class="section section-alt" id="facilities">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Campus Infrastructure</span>
+          <h2 class="section-title">Well-Equipped Campus Facilities</h2>
+          <p class="section-desc">Designed to support comprehensive student development, academic focus, and physical recreation.</p>
+        </div>
+
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="images/campus-grounds.jpg" alt="Campus Playground & Green Grounds" width="400" height="220" loading="lazy">
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Sports & Open Grounds</h3>
+              <p class="facility-text">Spacious outdoor green ground supporting cricket, athletics, volleyball, and physical fitness activities.</p>
+            </div>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="images/campus-building.jpg" alt="Academic Wing" width="400" height="220" loading="lazy">
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Spacious Classrooms</h3>
+              <p class="facility-text">Well-ventilated, naturally lit lecture rooms designed for comfortable learning and audio-visual instruction.</p>
+            </div>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="images/campus-entrance.jpg" alt="College Administrative Block" width="400" height="220" loading="lazy">
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Administrative Wing</h3>
+              <p class="facility-text">Centralized student help desk, fee counters, examination cell, and Principal's office for prompt student services.</p>
+            </div>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="images/campus-building.jpg" alt="Library & Labs" width="400" height="220" loading="lazy">
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Library & Practical Labs</h3>
+              <p class="facility-text">Reference library holding prescribed university texts, journals, and practical science and computer lab stations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="facilities.html" class="btn btn-primary">Explore All Campus Facilities →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Contact Strip -->
+    <section class="section" id="location">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Campus Location</span>
+          <h2 class="section-title">Visit Our Campus</h2>
+          <p class="section-desc">Conveniently situated in Bharnakalan, Mathura, with good road connectivity to surrounding rural and urban centres.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: start;">
+          <div class="form-card">
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1.2rem; color: var(--primary-navy);">Campus Address & Office Hours</h3>
+            <p style="margin-bottom: 0.8rem;">
+              <strong>Captain Rakesh Mohan Shyam Degree College</strong><br>
+              Bharnakalan, District Mathura,<br>
+              Uttar Pradesh - <span class="placeholder-tag">[PLACEHOLDER: Postal PIN]</span>
+            </p>
+            <p style="margin-bottom: 0.8rem;">
+              <strong>College Code:</strong> 0538<br>
+              <strong>Affiliated To:</strong> Dr. B. R. Ambedkar University, Agra
+            </p>
+            <p style="margin-bottom: 0.8rem;">
+              <strong>Office Hours:</strong> Monday – Saturday: 9:00 AM – 4:00 PM<br>
+              <em>(Closed on Sundays and Gazetted Holidays)</em>
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              <strong>Official Contact:</strong> <span class="placeholder-tag">[PLACEHOLDER: Phone / Email]</span>
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Get Directions & Contact Form</a>
+          </div>
+
+          <div class="form-card" style="background-color: var(--bg-surface-alt); text-align: center; display: flex; flex-direction: column; justify-content: center; min-height: 280px;">
+            <span style="font-size: 3rem; margin-bottom: 1rem;">🗺️</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--primary-navy);">Map & Transport Guidelines</h4>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.2rem;">
+              Accessible via Mathura district road network. Nearest major railway station is Mathura Junction. Local bus and auto connectivity available from local junctions.
+            </p>
+            <a href="https://maps.google.com/?q=Bharnakalan+Mathura" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="color: var(--primary-navy); border-color: var(--border-medium); align-self: center;">
+              Open in Google Maps ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Sticky Action Bar (FR-7.1 Item 2) -->
+  <aside class="mobile-action-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-action-bar-inner">
+      <a href="tel:[PLACEHOLDER:Phone]" class="mobile-action-btn">
+        <span class="btn-icon">📞</span>
+        <span>Call Office</span>
+      </a>
+      <a href="contact.html#enquiry" class="mobile-action-btn">
+        <span class="btn-icon">💬</span>
+        <span>Enquire</span>
+      </a>
+      <a href="admissions.html" class="mobile-action-btn highlight">
+        <span class="btn-icon">🎓</span>
+        <span>Admissions</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Site Footer (FR-7.1 Item 3) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Identity -->
+        <div>
+          <div class="footer-brand-title">Captain Rakesh Mohan Shyam Degree College</div>
+          <p class="footer-about-text">
+            Affiliated to Dr. B. R. Ambedkar University, Agra. Official College Code: 0538. Committed to accessible, ethical, and high-quality undergraduate degree education.
+          </p>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Bharnakalan, Mathura, Uttar Pradesh</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>🏛️</span>
+            <span>College Code: 0538 | DBRAU Agra</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Academics & Admissions -->
+        <div>
+          <h3 class="footer-heading">Academics</h3>
+          <ul class="footer-links">
+            <li><a href="academics.html#ba">Bachelor of Arts (B.A.)</a></li>
+            <li><a href="academics.html#bsc">Bachelor of Science (B.Sc.)</a></li>
+            <li><a href="academics.html#bcom">Bachelor of Commerce (B.Com.)</a></li>
+            <li><a href="academics.html#calendar">Academic Calendar</a></li>
+            <li><a href="admissions.html#fees">Fee Structure</a></li>
+            <li><a href="admissions.html#process">Admission Guidelines</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Compliance & Committees (PRD Section 6) -->
+        <div>
+          <h3 class="footer-heading">Compliance</h3>
+          <ul class="footer-links">
+            <li><a href="committees.html#anti-ragging">Anti-Ragging Committee</a></li>
+            <li><a href="committees.html#icc">Internal Complaints (ICC)</a></li>
+            <li><a href="committees.html#grievance">Grievance Redressal</a></li>
+            <li><a href="committees.html#rti">Right to Information (RTI)</a></li>
+            <li><a href="committees.html#code-of-conduct">Code of Conduct</a></li>
+            <li><a href="about.html#approvals">University Affiliation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Links -->
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="faculty.html">Faculty Directory</a></li>
+            <li><a href="facilities.html">Campus Facilities</a></li>
+            <li><a href="notices.html">Latest Notices & Circulars</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="accessibility.html">Accessibility Statement</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span class="current-year">2026</span> Captain Rakesh Mohan Shyam Degree College, Bharnakalan, Mathura. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="accessibility.html">Accessibility</a>
+        </div>
+      </div>
     </div>
   </footer>
 
