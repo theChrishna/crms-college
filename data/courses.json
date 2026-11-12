@@ -5,18 +5,19 @@
     "faculty": "Faculty of Arts & Humanities",
     "level": "Undergraduate",
     "duration": "3 Years (6 Semesters) under NEP 2020",
-    "intake": "[PLACEHOLDER: Official Sanctioned Intake, e.g. 400 Seats]",
+    "intake": "420",
     "eligibility": "10+2 (Intermediate) or equivalent examination from a recognized board in any stream (Arts, Science, Commerce).",
     "subjects": [
       "Hindi Literature",
       "English Literature",
       "History",
       "Political Science",
-      "Sociology",
+      "Home Science",
       "Economics",
-      "Geography"
+      "Geography",
+      "Education"
     ],
-    "feeSummary": "[PLACEHOLDER: As prescribed by DBRAU Agra and State Fee Regulatory Committee]",
+    "feeSummary": "₹3,500 per semester",
     "description": "Comprehensive degree curriculum designed to develop critical thinking, communication skills, and in-depth cultural, historical, and socio-economic perspectives."
   },
   {
@@ -25,7 +26,7 @@
     "faculty": "Faculty of Science",
     "level": "Undergraduate",
     "duration": "3 Years (6 Semesters) under NEP 2020",
-    "intake": "[PLACEHOLDER: Official Sanctioned Intake, e.g. 120 Seats]",
+    "intake": "360",
     "eligibility": "10+2 (Intermediate) with Science stream (Mathematics or Biology group) with minimum qualifying marks from recognized board.",
     "subjects": [
       "Physics",
@@ -34,7 +35,7 @@
       "Zoology",
       "Botany"
     ],
-    "feeSummary": "[PLACEHOLDER: As prescribed by DBRAU Agra and State Fee Regulatory Committee]",
+    "feeSummary": "₹4,000 per semester",
     "description": "Hands-on scientific education with practical laboratory training, empirical investigation methods, and rigorous theoretical foundations in natural and physical sciences."
   },
   {
@@ -43,7 +44,7 @@
     "faculty": "Faculty of Commerce",
     "level": "Undergraduate",
     "duration": "3 Years (6 Semesters) under NEP 2020",
-    "intake": "[PLACEHOLDER: Official Sanctioned Intake, e.g. 120 Seats]",
+    "intake": "240",
     "eligibility": "10+2 (Intermediate) with Commerce or Science/Arts with Mathematics from a recognized education board.",
     "subjects": [
       "Financial Accounting",
@@ -53,7 +54,7 @@
       "Income Tax & Auditing",
       "Banking & Financial Systems"
     ],
-    "feeSummary": "[PLACEHOLDER: As prescribed by DBRAU Agra and State Fee Regulatory Committee]",
+    "feeSummary": "₹3,500 per semester",
     "description": "Professional commerce education focusing on financial reporting, taxation, commercial legislation, trade, banking operations, and corporate management."
   }
 ]
