@@ -1003,3 +1003,49 @@ textarea.form-control { resize: vertical; min-height: 7rem; }
 /* Links on dark surfaces: crimson (the default hover) is unreadable on near-black */
 :where(.top-bar, .site-footer-mod, .hero) a:hover { color: var(--color-gold-bright); }
 .skip-to-content:hover, .skip-link:hover { color: #fff; }
+
+/* --------------------------------------------------------------------------
+   27. Motion
+   One authored moment (hero arrival), quiet scroll reveals for content blocks,
+   and small feedback on controls. Content is visible by default; script.js
+   only hides below-the-fold blocks until they scroll into view.
+   -------------------------------------------------------------------------- */
+@keyframes riseIn   { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+@keyframes settleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+@keyframes heroBg   { from { transform: scale(1.06); } to { transform: scale(1); } }
+@keyframes menuIn   { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+/* Scroll reveal: opacity everywhere; movement only when motion is welcome */
+.reveal { opacity: 0; transition: opacity 0.5s ease; transition-delay: var(--reveal-delay, 0ms); }
+.reveal.is-visible { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transform: translateY(14px);
+    transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-visible { transform: none; }
+
+  /* Hero arrival: text rises in sequence, emblem settles, artwork eases out of a slight zoom */
+  .hero-content > * { animation: riseIn 0.75s var(--ease-out) both; }
+  .hero-content > :nth-child(1) { animation-delay: 0.05s; }
+  .hero-content > :nth-child(2) { animation-delay: 0.16s; }
+  .hero-content > :nth-child(3) { animation-delay: 0.27s; }
+  .hero-emblem { animation: settleIn 0.9s var(--ease-out) 0.2s both; }
+  .hero::before { animation: heroBg 1.8s var(--ease-out) both; }
+
+  /* Continuity: the mobile menu opens from the header, faculty cards fade in when filtered */
+  .site-nav__links.is-open { animation: menuIn 0.22s var(--ease-out); }
+  .faculty-card { animation: fadeIn 0.35s ease both; }
+
+  /* Feedback: controls acknowledge a press */
+  .hp-btn:active, .mit-btn:active, .site-nav__apply-btn:active, .form-submit-btn:active, .filter-btn:active { transform: scale(0.98); }
+
+  /* Page-to-page crossfade where the browser supports it */
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.2s; }
+}
+
+@media print { .reveal { opacity: 1 !important; transform: none !important; } }

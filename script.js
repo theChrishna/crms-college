@@ -39,6 +39,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 4. Scroll reveal: blocks below the fold fade (and rise slightly) once as they enter view.
+  // Anything already on screen at load is left alone, so there is no flash and no hidden content.
+  if ('IntersectionObserver' in window) {
+    const targets = document.querySelectorAll(
+      'main .section-header, main .stat-card, main .degree-card, main .pathway-card, main .highlight-card, ' +
+      'main .hp__highlight-tease, main .quote-block, main .map-block, main .form-card, main .data-table-wrapper, ' +
+      'main .gallery-img-wrap'
+    );
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const seen = new Map(); // parent -> count, used to stagger siblings (capped)
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        io.unobserve(el);
+        el.classList.add('is-visible');
+        // Hand transitions back to the element's own styles once the reveal is done
+        setTimeout(() => {
+          el.classList.remove('reveal', 'is-visible');
+          el.style.removeProperty('--reveal-delay');
+        }, 1100);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+    targets.forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return;
+      const n = seen.get(el.parentElement) || 0;
+      seen.set(el.parentElement, n + 1);
+      if (!reduce) el.style.setProperty('--reveal-delay', Math.min(n, 4) * 70 + 'ms');
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
+
   // 5. Highlights Carousel Controls
   const carouselContainer = document.querySelector('.hp__highlights-container');
   const prevBtn = document.querySelector('.js-carousel-prev');
