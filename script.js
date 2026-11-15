@@ -15,62 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainNav = document.getElementById('mainNav') || document.querySelector('.site-nav__links');
 
   if (navTrigger && mainNav) {
+    const setNav = (open) => {
+      mainNav.classList.toggle('is-open', open);
+      navTrigger.setAttribute('aria-expanded', String(open));
+    };
+
     navTrigger.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isExpanded = navTrigger.getAttribute('aria-expanded') === 'true';
-      navTrigger.setAttribute('aria-expanded', !isExpanded);
-      mainNav.classList.toggle('active');
+      setNav(!mainNav.classList.contains('is-open'));
     });
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-      if (!navTrigger.contains(e.target) && !mainNav.contains(e.target)) {
-        mainNav.classList.remove('active');
-        navTrigger.setAttribute('aria-expanded', 'false');
+      if (!navTrigger.contains(e.target) && !mainNav.contains(e.target)) setNav(false);
+    });
+
+    // Close on Escape and return focus to the trigger
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
+        setNav(false);
+        navTrigger.focus();
       }
-    });
-  }
-
-  // 3. Search Topper Drawer (MIT Admissions Style)
-  const searchTriggers = document.querySelectorAll('.js-search-trigger');
-  const searchTopper = document.getElementById('search__topper');
-  const searchInput = document.getElementById('search-input');
-
-  if (searchTriggers.length > 0 && searchTopper) {
-    searchTriggers.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        searchTopper.classList.toggle('active');
-        if (searchTopper.classList.contains('active')) {
-          searchInput?.focus();
-        }
-      });
-    });
-
-    // Close on Escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && searchTopper.classList.contains('active')) {
-        searchTopper.classList.remove('active');
-      }
-    });
-  }
-
-  // 4. Teaser Feed: Condense | Expand View Toggle
-  const teaseCloseBtn = document.querySelector('.js-tease-close');
-  const teaseExpandBtn = document.querySelector('.js-tease-expand');
-  const teaseFeedMod = document.querySelector('.tease-feed-mod');
-
-  if (teaseCloseBtn && teaseExpandBtn && teaseFeedMod) {
-    teaseCloseBtn.addEventListener('click', () => {
-      teaseFeedMod.classList.add('tease-feed-mod--small');
-      teaseCloseBtn.classList.add('active');
-      teaseExpandBtn.classList.remove('active');
-    });
-
-    teaseExpandBtn.addEventListener('click', () => {
-      teaseFeedMod.classList.remove('tease-feed-mod--small');
-      teaseExpandBtn.classList.add('active');
-      teaseCloseBtn.classList.remove('active');
     });
   }
 
@@ -87,46 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click', () => {
       carouselContainer.scrollBy({ left: 360, behavior: 'smooth' });
     });
-  }
-
-  // 6. Notice Category Filter & Search (notices.html)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const noticeItems = document.querySelectorAll('.notice-item');
-  const noticeSearchInput = document.getElementById('noticeSearch');
-
-  if (filterBtns.length > 0 && noticeItems.length > 0) {
-    function filterNotices() {
-      const activeBtn = document.querySelector('.filter-btn.active');
-      const selectedCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
-      const searchQuery = noticeSearchInput ? noticeSearchInput.value.toLowerCase().trim() : '';
-
-      noticeItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        const itemTitle = item.querySelector('.notice-item-title')?.textContent.toLowerCase() || '';
-        const itemDesc = item.querySelector('.notice-item-desc')?.textContent.toLowerCase() || '';
-
-        const matchesCategory = selectedCategory === 'all' || itemCategory === selectedCategory;
-        const matchesSearch = searchQuery === '' || itemTitle.includes(searchQuery) || itemDesc.includes(searchQuery);
-
-        if (matchesCategory && matchesSearch) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        filterNotices();
-      });
-    });
-
-    if (noticeSearchInput) {
-      noticeSearchInput.addEventListener('input', filterNotices);
-    }
   }
 
   // 7. Faculty Department Filter (faculty.html)
@@ -167,6 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
           lightboxImg.alt = img.alt || 'Campus Photo';
           lightboxModal.classList.add('active');
         }
+      });
+    });
+
+    // Keyboard: gallery tiles are role="button", so Enter / Space must open them
+    galleryItems.forEach(item => {
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
       });
     });
 
